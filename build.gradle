@@ -1,0 +1,28 @@
+group 'com.alecsandra'
+version '1.0-SNAPSHOT'
+
+buildscript{
+    repositories{
+        mavenCentral()
+    }
+
+    dependencies{
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE'
+    }
+}
+// add predefined functionality
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+
+// define 1 or more location for reposetories
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    compile 'org.springframework:spring-webmvc:4.3.3.RELEASE'
+    // compile 'groupName:artifactId:version'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+}
